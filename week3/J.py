@@ -1,6 +1,5 @@
 # Template Codeforces
 import sys
-import math as m
 input = sys.stdin.readline
      
     ############ ---- Input Functions ---- ############
@@ -16,8 +15,15 @@ def invr(): # separated int
           
 ############ ---- Problem Solution ---- ############
 def main():
-    sys.stdout.write(str(sum([int(x) for x in input().strip()])))
-
+    line = insr().strip()
+    last = line
+    while len(line):
+        last = line
+        line = insr().strip()
+        
+    sys.stdout.write(last)
+    
+        
         
 if __name__ == '__main__':
     main()
